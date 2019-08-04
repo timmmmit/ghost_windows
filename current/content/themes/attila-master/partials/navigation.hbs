@@ -2,7 +2,16 @@
 	<a class="close-button">{{t "Close"}}</a>
 	<div class="nav-wrapper">
 		<p class="nav-label">{{t "Menu"}}</p>
-		<ul>
+			{{#get "tags" limit="all"}}
+				<ul class="tags">
+					{{#foreach tags}}
+						<li>
+							<a href="{{url}}">{{name}}</a>
+						</li>
+					{{/foreach}}
+				</ul>
+			{{/get}}
+		{{!-- <ul>
 			{{#foreach navigation}}
 			<li class="nav-{{slug}}{{#if current}} active{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
 			{{/foreach}}
@@ -17,6 +26,6 @@
 			{{else}}
 			<li class="nav-rss"><a href="{{@site.url}}/rss/"><i class="ic ic-rss"></i> {{t "Subscribe"}}</a></li>
 			{{/if}}
-		</ul>
+		</ul> --}}
 	</div>
 </nav>
