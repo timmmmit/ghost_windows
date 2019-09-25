@@ -1,8 +1,8 @@
 ### 修改系统配置
 - 在搜索栏输入**cmd**, 右击**命令提示符**, 点击已管理员身份运行. 如图一所示:![图一](https://upload-images.jianshu.io/upload_images/10385410-3a8fc27b1af970e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-- 复制以下两行指令到命令行窗口内, 点击回车运行, 结果如图二:
+- 分别复制以下两行指令到命令行窗口内, 点击回车运行, 结果如图二:
 >REG ADD HKLM\SYSTEM\CurrentControlSet\Services\RasMan\Parameters /v ProhibitIpSec /t REG_DWORD /d 0x0 /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AssumeUDPEncapsulationContextOnSendRule /t REG_DWORD /d 0x2 /f
+>REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AssumeUDPEncapsulationContextOnSendRule /t REG_DWORD /d 0x2 /f
 
 ![图二](https://upload-images.jianshu.io/upload_images/10385410-22cd091e4bf370b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 - 重启电脑让刚才修改的注册表生效
